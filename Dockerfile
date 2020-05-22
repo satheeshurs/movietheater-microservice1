@@ -8,4 +8,5 @@ RUN mvn install
 FROM openjdk:8-jre-alpine
 WORKDIR /app
 COPY --from=1 /app/target/movietheater-microservice1.jar /app
+EXPOSE 8081
 CMD ["java -jar movietheater-microservice1"]
