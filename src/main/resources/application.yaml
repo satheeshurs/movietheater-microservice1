@@ -1,9 +1,10 @@
 server:
-    port: 8081
+    port: 8089
 spring:
     application:
         name: movie-theater
 eureka:
     client:
-        serviceUrl:
-            defaultZone: http://localhost:8761/eureka/
+        registerWithEureka: true
+        fetchRegistry: true
+        serviceUrl.defaultZone: http://eurekaserver:8761/eureka
